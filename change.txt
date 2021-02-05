@@ -1,0 +1,17 @@
+change mariam's pic, leave the 2nd pic
+
+testimonials
+
+change wheel chair pic 
+
+business cards
+ brochure
+
+
+ icons
+ meal preparation
+
+
+
+ <script src="https://cointelegraph.com/news-widget" data-ct-widget-limit="5" data-ct-widget-theme="dark" 
+ data-ct-widget-priceindex="true" data-ct-widget-currency="USD" data-ct-widget-language="en"></script>
