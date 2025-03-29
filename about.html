@@ -1,7 +1,4 @@
-<!--
-Author: Jaytech Web Solutions
-Author URL: http://w3layouts.com
--->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -197,70 +194,55 @@ Author URL: http://w3layouts.com
 <!-- //portfolio -->
 <hr>
  
-<!--testimonials-->
-<div class="">
-  <div class="testimonials-clean contain">
-    <div class="container">
-        <div class="intro">
-            <h2 class="text-center">Testimonials </h2>
-            <p class="text-center">Our customers love us! Read what they have to say below.</p>
-        </div>
-        <div class="row people">
-            <div class="col-md-6 col-lg-4 item">
-                <div class="box">
-                    <p class="description">As a nurse care manager, I refer families in need of a dependable care to LIMS.
-                       I trust their commitment to excellence ,flexibility and most of all kindness. 
-                    </p>
-                </div>
-                <div class="author"><img class="rounded-circle" src="assets/images/test.jpeg">
-                    <h5 class="name">Dixcy Bosley RN, MSN, FNP</h5>
-                    <p class="title">Nurse Care Manager</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 item">
-            <div class="box">
-              <p class="description">As a social worker, I have seen how the relationship with a caregiver impacts a person's health and 
-                well-being. The staff at LIMS treats each client with respect, giving them the encouragement and support to live each day 
-                to the fullest.
-                Samantha and her team have set a new standard in caregiving. I know that I can count on LIMS to provide consistent, reliable,
-                 high-quality home care for my clients as well as for my own family members. 
-                The team at LIMS is responsible and caring. Working with them gives families peace of mind and eases the client's adaptation 
-                to illness, disability or aging. I have seen firsthand how they treat each client with respect and empathy..
-              </p>
-            </div>
-            <div class="author"><img class="rounded-circle" src="">
-              <h5 class="name">Michelle Sheahan, LICSW, LCSW-C</h5>
-              <p class="title">Social Worker</p>
+<!-- Testimonials -->
+<section class="testimonials-clean py-5 bg-light">
+  <div class="container">
+    <div class="intro text-center mb-4">
+      <h2>Testimonials</h2>
+      <p>Our customers love us! Read what they have to say below.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card opacity-0 translate-y-10">
+          <p class="description">As a nurse care manager, I refer families in need of dependable care to LIMS. I trust their commitment to excellence, flexibility, and most of all, kindness.</p>
+          <div class="d-flex align-items-center mt-3">
+            <img class="rounded-circle me-3" src="assets/images/test.jpeg" width="50" height="50" alt="Dixcy Bosley">
+            <div>
+              <h6 class="mb-0">Dixcy Bosley RN, MSN, FNP</h6>
+              <small class="text-muted">Nurse Care Manager</small>
             </div>
           </div>
-            <div class="col-md-6 col-lg-4 item">
-              <div class="box">
-                  <p class="description">Hospice care at home is a 
-                    sacred and scary time for families, LIMS caregivers are trained to deliver the physical, emotional 
-                    and spiritual care needed for these challenges.</p>
-              </div>
-              <div class="author"><img class="rounded-circle" src="assets/images/test.jpeg">
-                  <h5 class="name">Dixcy Bosley RN, MSN, FNP</h5>
-                  <p class="title">Nurse Care Manager</p>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card opacity-0 translate-y-10 delay-150">
+          <p class="description">As a social worker, I have seen how the relationship with a caregiver impacts a person's well-being. LIMS treats each client with respect, giving them the will to live. They're the standard in caregiving.</p>
+          <div class="d-flex align-items-center mt-3">
             
-              
-            <div class="col-md-6 col-lg-4 item">
-              <div class="box">
-                  <p class="description">Being with LIMS has given me hope again, and I've come to know there are still some good people out there.
-                      My old age is fun and worth living.
-                  </p>
-              </div>
-              <div class="author"><img class="rounded-circle" src="assets/images/razzy.jpeg">
-                  <h5 class="name">George Ransford</h5>
-                  <p class="title">Razzy Motors</p>
-              </div>
+            <div>
+              <h6 class="mb-0">Michelle Sheahan, LICSW, LCSW-C</h6>
+              <small class="text-muted">Social Worker</small>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card opacity-0 translate-y-10 delay-300">
+          <p class="description">Being with LIMS has given me hope again. I’ve come to know there are still good people out there. My old age is now fun and worth living.</p>
+          <div class="d-flex align-items-center mt-3">
+            <img class="rounded-circle me-3" src="assets/images/razzy.jpeg" width="50" height="50" alt="George Ransford">
+            <div>
+              <h6 class="mb-0">George Ransford</h6>
+              <small class="text-muted">Razzy Motors</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
+</section>
 <br>
   <!--care-->
   <hr>
@@ -347,6 +329,22 @@ Author URL: http://w3layouts.com
       }
     </script>
     <!-- /move top -->
+
+    <script>
+      const cards = document.querySelectorAll('.testimonial-card');
+    
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      }, { threshold: 0.1 });
+    
+      cards.forEach(card => observer.observe(card));
+    </script>
+    
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     
